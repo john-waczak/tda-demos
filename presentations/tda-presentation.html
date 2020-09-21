@@ -20,15 +20,14 @@
                     <div class="wrap" >
                         <h1><strong>Topological Data Analysis</strong></h1>
                         <h2>Discovering the shape of your data</h2>
-                        <h3>Scientific Computing</h3>
-                        <h3>9/28/2020</h3>
+                        <h3><em>John Waczak</em></h3>
+                        <h4>Scientific Computing</h4>
+                        <h4>9/28/2020</h4>
                         <p class="test-intro">
                             To explore today's presentation and the acompanying jupyter notebooks, visit <a href="https://github.com/john-waczak/tda-demos">our github repository</a>.
                         </p>
                     </div>
                 </section>
-
-
 
 
 
@@ -48,7 +47,7 @@
                                 </li>
                                 <li>
                                     <h1>Why should you care?</h1>
-                                    <h3> Noisy data, signal periodicity, curse of dimensionality, persistence of shape </h3>
+                                    <h3> Noisy data,  </h3>
                                 </li>
                                 <li>
                                     <h1>Persistence Homology</h1>
@@ -69,12 +68,193 @@
 
                 <!-- Topology 1 -->
                 <section class="aligncenter">
-                    
+                    <div class="wrap">
+                        <h1><strong>Topology Overview</strong></h1>
+                        <h3> A <em>topological space</em> is a set endowed with a special structure called a <em>topology</em> which allows us to define a notion of "open" and "closed" sets. </h3>
+                    </div>
+                </section>
+
+
+
+                <!-- Topology 2 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Examples of open sets in Rn</strong></h1>
+                        <ul class="flexblock features">
+                            <li>
+                                <div>
+                                    <img alt="" src="images/open1.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img alt="" src="images/open2.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img alt="" src="images/open3.svg"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Topology 3 -->
+                <section class="aligncenter">
+                    <h3> Once we have a notion of open sets, we can define what it means for a function to be <em>continuous</em>. </h3>
+                    <h3> </h3>
+                    <h3> </h3>
+                    <h3><strong>Def:</strong> If a function, <em>f</em>, between two topological spaces is continuous and has a continuous inverse, we call <em>f</em> a <strong>homeomorphism</strong></h3>
+                    <h3> </h3>
+                    <h3> </h3>
+                    <h3>Topologists use homeomorphisms to classify different types of geometric structures</h3>
+               </section>
+
+                <!-- Topology 4 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Homeomorphisms in R2</strong></h1>
+                        <img alt="" src="images/homeomorphisms.svg"/>
+                    </div>
+                </section>
+
+                <!-- Topology 5 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>A coffee cup <em>"is"</em> a donut</strong></h1>
+                        <img alt="" src="images/Mug_and_Torus_morph.gif">
+                    </div>
+                </section>
+
+
+                <!-- Topology 6 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Surface Classification Theorem:</strong></h1>
+                        <h3>Every compact (closed and bounded), connected, two-dimensional manifold is homeomorphic to the sphere, a connected sum of tori, or a connected sum of real projective planes</h3>
+                        <img alt="" src="images/classification.svg">
+                        <h3>In other words, we can classify surfaces by how many "holes" they have!</h3>
+                    </div>
                 </section>
 
 
 
 
+                <!-- Why you should care 1 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Why should you care?</strong></h1>
+                        <h1>Data has shape, and shape has meaning.</h1>
+                    </div>
+                </section>
+
+                <!-- Why you should care 2 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>The shape of data is resistant to noise</strong></h1>
+                        <ul class="flexblock features">
+                            <li>
+                                <div>
+                                    <h2>No noise</h2>
+                                    <img alt="" src="images/sine_with_noise0.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>Some noise</h2>
+                                    <img alt="" src="images/sine_with_noise1.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>A lot of noise</h2>
+                                    <img alt="" src="images/sine_with_noise2.svg"/>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Why you should care 3 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>High dimensional data may have meaningful features that can not be easily visualized</strong></h1>
+                        <a href="https://www.pnas.org/content/108/17/7265">
+                            <img alt="" src="images/breast-cancer.png"/>
+                        </a>
+                    </div>
+                </section>
+
+
+
+                <!-- Persistent Homology 1 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>How can we programaticllay discover <em>shape</em> in our datasets?</strong></h1>
+                        <h1><strong>Answer:</strong> <em>Persisent Homology</em> </h1>
+                    </div>
+                </section>
+
+                <!-- Persistent Homology 2 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Homology refers to mathematical method of distinguishing objects by characterizing the types of "holes" they contain. </strong></h1>
+                        <a href="https://www.pnas.org/content/108/17/7265">
+                            <img alt="" src="images/homology.png"/>
+                        </a>
+                        <img alt="" src="images/holes.svg"/>
+                    </div>
+                </section>
+
+
+
+
+
+                <!-- More information-->
+                <section>
+                    <div class="wrap">
+                        <h1> A great video with more details</h1>
+                        <div class="embed">
+                            <iframe src="https://www.youtube.com/embed/2PSqWBIrn90"></iframe>
+                        </div>
+                    </div>
+              </section>
+
+
+                <!-- Interesting Papers -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h2>
+                            <strong>Interesting papers on TDA</strong>
+                        </h2>
+                        <ul class="flexblock gallery">
+                            <li>
+                                <a href="https://arxiv.org/abs/1307.6188">
+                                    <figure>
+                                        <img alt="" src="images/paper1.png"/>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.ams.org/journals/bull/2008-45-01/S0273-0979-07-01191-3/">
+                                    <figure>
+                                        <img alt="" src="images/paper2.png"/>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://arxiv.org/pdf/1805.03699.pdf">
+                                    <figure>
+                                        <img alt="" src="images/paper3.png"/>
+                                    </figure>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
 
 
 
