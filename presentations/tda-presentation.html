@@ -215,21 +215,192 @@
                         <h1><strong>There's still one problem:</strong> </h1>
                         <h2> Our raw data looks like this (in 2 dimensions or more...):</h2>
                         <img alt="" src="images/point-cloud.svg"/>
+                        <h2> Every hole is a hole of dimension 0... </h2>
+                    </div>
+                </section>
+
+                <!-- Persistent Homology 3 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Alternatively, we could connect every pair of points to form a graph</strong> </h1>
+                        <h2> This does not help us decide which holes are truly meaningful. </h2>
+                        <div class="embed">
+                            <img alt="" src="images/generated_simplicial_complex.svg"/>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Persistent Homology 4 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Instead, let's slowly create a graph and keep track of which topological features <em>persist</em> as the graph is built.</strong> </h1>
+                        <h2> This is the idea of Persistent Homology with Ripser graphs. </h2>
+                        <div class="embed">
+                            <img alt="" src="images/ripser.gif"/>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- Persistent Homology 5 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>For each radius, we obtain a corresponding network</strong> </h1>
+                        <h2>This means we can track all of the H0, H1, H2, etc... hole types as a function of the radius.</h2>
+                        <h2> Those features that <em>persist</em> as the radius increases correspond to meaningful shapes in your data.</h2>
+                    </div>
+                </section>
+
+                <!-- Persistent Homology 6 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Example 1: Data forms a circle</strong> </h1>
+                        <div class="embed">
+                            <img alt="" src="images/persistence-circle.png"/>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Persistent Homology 7 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Example 2: Data forms a torus</strong> </h1>
+                        <div class="embed">
+                            <img alt="" src="images/persistence-torus.png"/>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Persistent Homology 8 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Outlier detection and time-dependent shape</strong> </h1>
+                        <div class="embed">
+                            <video autoplay loop>
+                                <source src="images/persistence-decay.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </section>
 
 
 
-
-                <!-- More information-->
-                <section>
+                <!-- Embeddings 1 -->
+                <section class="aligncenter">
                     <div class="wrap">
-                        <h1> A great video with more details</h1>
+                        <h1><strong>Final topic: embeddings in higher dimensions</strong> </h1>
+                        <h2> Usually, we like to take high dimensional data and some how reduce it to a simpler representations that requires fewer varaibels</h2>
+                        <h2><strong>Examples:</strong>PCA, ICA, t-SNE, etc...</h2>
+                        <h2>What if your data has a topological obstruction that makes it hard to analyze in the number of dimensions you currently have?</h2>
+                    </div>
+                </section>
+
+
+                <!-- Embeddings 2 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Some datasets exhibit self intersections in low dimensions</strong> </h1>
+                        <h2>Ex1: Mobius Strip</h2>
                         <div class="embed">
-                            <iframe src="https://www.youtube.com/embed/2PSqWBIrn90"></iframe>
+                            <img alt="" src="images/flat-mobius.png"/>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- Embeddings 3 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>If you could but look in higher dimensions...</strong> </h1>
+                        <h2>Ex1: Mobius Strip in 3d has <em>no</em> self intersections</h2>
+                        <div class="embed">
+                            <img alt="" src="images/mobius.gif"/>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Embeddings 4 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>It may be possible to remove self-intersection in higher dimensions</strong> </h1>
+                        <h2>Ex2: The Klein bottle self intersects in 3d, but not 4d.</h2>
+                        <ul class="flexblock gallery">
+                            <li>
+                                <figure>
+                                    <img alt="" src="images/klein-bottle.svg" width=20% height=30%>
+                                </figure>
+                            </li>
+                    </div>
+                </section>
+
+
+                <!-- Embeddings 5 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Important features of you data could be knotted together</strong> </h1>
+                        <h2>This kind of issue tends to fool most ML <a href="https://scikit-learn.org/stable/modules/clustering.html#"> classifiers</a>.</h2>
+                        <img alt="" src="images/knot.svg">
+                    </div>
+                </section>
+
+
+                <!-- Embeddings 5 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>For time series data, we can deal with this problem via <em>Sliding Window Embeddings</em></strong> </h1>
+
+                        <img alt="" src="images/sliding_window.svg">
+                    </div>
+                </section>
+
+                <!-- Embeddings 6 -->
+                <section class="aligncenter">
+                    <div class="wrap">
+                        <h1><strong>Example:</strong> </h1>
+                        <a href=""> <img alt="https://www.researchgate.net/figure/From-a-periodic-function-to-its-sliding-window-point-cloud-Left-A-periodic-function-f_fig1_251232706" src="images/sliding-window_embedding.png"></a>
+                    </div>
+                </section>
+
+
+
+                <!--Summary-->
+                <section>
+                    <div class="wrap size-50 aligncenter">
+                        <h1>
+                            <strong>
+                                Summary:
+                            </strong>
+                        </h1>
+                        <div class="bg-white shadow">
+                            <ul class="flexblock reasons">
+                                <li>
+                                    <h1>Topology</h1>
+                                    <h3> We can characterize objects by their topological features (holes). </h3>
+                                </li>
+                                <li>
+                                    <h1>Why should you care?</h1>
+                                    <h3> Data has shape, shape has meaning.  </h3>
+                                </li>
+                                <li>
+                                    <h1>Persistence Homology</h1>
+                                    <h3> A way to compute topological features of your data. </h3>
+                                </li>
+                                <li>
+                                    <h1>Sliding Window Embeddings</h1>
+                                    <h3> A way to generate higher dimensional object from low dimensional data </h3>
+                                    <h4> (To give you something to analyze)</h4>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-              </section>
+                </section>
+
+
 
 
                 <!-- Interesting Papers -->
@@ -265,174 +436,18 @@
                     </div>
                 </section>
 
-
-
-
-
-
-                <!-- Slide 3 -->
-                <section>
+                <section class="aligncenter">
                     <div class="wrap">
-                        <div class="grid vertical-align">
-                            <div class="column">
-                                <h3>
-                                    <strong>
-                                        Full stack JavaScript
-                                    </strong>
-                                </h3>
-                                <p>
-                                    This is another test paragraph
-                                </p>
-                                <p>
-                                    Scelerisque viverra mauris, in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies.
-                                </p>
-                            </div>
-
-                            <div class="column">
-                                <!-- an image -->
-                                <img alt="" src="images/simplicial_complex.png"/>
-                            </div>
-                        </div>
+                        <h1><strong>Questions?</strong></h1>
                     </div>
                 </section>
 
-
-
-
-                <section>
+                <section class="aligncenter">
                     <div class="wrap">
-                        <h2>Growing the Simplicial Complex</h2>
-                        <ul class="flexblock features">
-                            <li>
-                                <div>
-                                    <h2>Small radius</h2>
-                                    <img alt="" src="images/simplicial_complex.png"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>Medium Radius</h2>
-                                    <img alt="" src="images/simplicial_complex.png"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>Large Radius</h2>
-                                    <img alt="" src="images/simplicial_complex.png"/>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <h1><strong><a href"https://github.com/john-waczak/tda-demos/tree/master/notebooks">Demo</a></strong></h1>
                     </div>
                 </section>
 
-
-
-
-                <section>
-                    <div class="wrap">
-                        <h2>
-                            <strong>Bootcamp Projects</strong>
-                            <p> What we build!</p>
-                            <ul class="flexblock gallery">
-                                <li>
-                                    <a href="#">
-                                        <figure>
-                                            <img alt="" src="images/simplicial_complex.png"/>
-                                            <figcaption>
-                                                <h2>
-                                                    Test caption
-                                                </h2>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <figure>
-                                            <img alt="" src="images/simplicial_complex.png"/>
-                                            <figcaption>
-                                                <h2>
-                                                    Test caption
-                                                </h2>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <figure>
-                                            <img alt="" src="images/simplicial_complex.png"/>
-                                            <figcaption>
-                                                <h2>
-                                                    Test caption
-                                                </h2>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <figure>
-                                            <img alt="" src="images/simplicial_complex.png"/>
-                                            <figcaption>
-                                                <h2>
-                                                    Test caption
-                                                </h2>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </h2>
-                    </div>
-                </section>
-
-
-
-                <section>
-                    <div class="wrap">
-                        <h2><strong>More info</strong></h2>
-                        <p>Find out more</p>
-                        <div class="grid vertical-align">
-                            <div class="column">
-                                <h4><strong> Instructors</strong></h4>
-                                <p>
-                                    We have great instructors!
-                                </p>
-                                <ul class="description">
-                                    <li><a href="#">Tom Riddle </a></li>
-                                    <li><a href="#">Albus Dumbledore</a></li>
-                                    <li><a href="#">Severus Snape</a></li>
-                                </ul>
-                            </div>
-                            <div class="column">
-                                <h4><strong> Pricing Info</strong></h4>
-                                <p>
-                                    Click below!
-                                </p>
-                                <ul class="description">
-                                    <li><a href="#">20 </a></li>
-                                    <li><a href="#">40</a></li>
-                                    <li><a href="#">60</a></li>
-                                </ul>
-                            </div>
-                            <div class="column">
-                                <h4><strong> Resources</strong></h4>
-                                <p>
-                                    Click below!
-                                </p>
-                                <ul class="description">
-                                    <li><a href="#">20 </a></li>
-                                    <li><a href="#">40</a></li>
-                                    <li><a href="#">60</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
 
             </article>
         </main>
